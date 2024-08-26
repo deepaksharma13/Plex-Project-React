@@ -109,6 +109,10 @@ body {
       &:hover {
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
         background-color: white;
+        button{
+          color: #fff;
+          background-color: #045594;
+        }
       }
       h6 {
         color: #045594;
@@ -116,10 +120,7 @@ body {
       button {
         color: #045594;
         border-color: #045594;
-        &:hover {
-          color: #fff;
-          background-color: #045594;
-        }
+     
       }
     }
   }
@@ -218,6 +219,9 @@ footer {
       img {
         max-width: 100px;
         height: 140px;
+      }
+      &:hover{
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
       }
     }
   }

@@ -135,8 +135,7 @@ const Header = () => {
                 </Nav>
 
                 <Button
-                  className="d-flex align-items-center logBtn"
-                  variant="outline-success"
+                  className="d-flex align-items-center logBtn"                  
                 >
                   {" "}
                   Login

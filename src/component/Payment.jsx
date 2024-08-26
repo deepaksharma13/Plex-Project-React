@@ -5,7 +5,8 @@ import { MdOutlineCheck } from "react-icons/md";
 
 function Payment() {
   return (
-    <section className="paymentSec bg-white my-4 p-3">
+    <section className="paymentSec bg-white my-4">
+      <div className="col-md-12"><p className="para">Payment Mode</p></div>
       <Row>
         <Col sm={12}>
           <div className="d-flex flex-wrap">

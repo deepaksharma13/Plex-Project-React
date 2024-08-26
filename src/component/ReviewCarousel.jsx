@@ -6,10 +6,10 @@ const ReviewCarousel = ({ items, settings, title }) => {
     dots: false,
     infinite: true,
     speed: 500,
-    margin:10,
+    margin: 10,
     slidesToShow: 3,
     slidesToScroll: 1,
-    autoplay:true,
+    autoplay: true,
     responsive: [
       {
         breakpoint: 1024,
@@ -17,47 +17,50 @@ const ReviewCarousel = ({ items, settings, title }) => {
           slidesToShow: 3,
           slidesToScroll: 3,
           infinite: true,
-          dots: true
-        }
+          dots: true,
+        },
       },
       {
         breakpoint: 600,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
-          initialSlide: 2
-        }
+          initialSlide: 2,
+        },
       },
       {
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
   return (
     <>
       <div className="carousel-container">
-        {title && <h6 className="mb-3">{title}</h6>}
+        {title && <h6 className="mb-3 para">{title}</h6>}
         <Slider {...settings}>
           {items.map((item, index) => (
             <div key={index} className="carousel-item ">
-              <div className="car-margin border border-success p-3" style={{height: "200px"}}>
-              <img
-              className="d-block rounded w-25 mb-2"
-              src={item.thumbnailUrl}
-              alt={`Slide ${index}`}
-            />
-            
-                {(item.title || item.albumId) && (
-                  <>
-                    {item.title && <p style={{fontSize:"15px", color:"#9A9A9A"}}>{item.title}</p>}
-                    {item.albumId && <span><b>{item.albumId}</b></span>}
-                  </>
-                )}
-            </div>
+              <div
+                className="car-margin border border-primary rounded p-3"
+                style={{ height: "200px" }}
+              >
+                <img
+                  className="d-block rounded  mb-2"
+                  style={{maxWidth:"50px"}}
+                  src={item.reviewerProfilePic}
+                  alt={`Slide ${index}`}
+                />
+                <p style={{ fontSize: "15px"}}>
+                  {item.reviewerName}
+                </p>
+                <span  className="ellips">
+                  {item.reviewText}
+                </span>
+              </div>
             </div>
           ))}
         </Slider>

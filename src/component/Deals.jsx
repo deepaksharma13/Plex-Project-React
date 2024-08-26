@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
+import {deal_API} from '../utilis/api'
 
 function Deals() {
   const [carouselItems, setCarouselItems] = useState([]);
@@ -7,7 +8,7 @@ function Deals() {
     // fetching data from an API
     const fetchData = async () => {
       //  API call
-      const response = await fetch("https://picsum.photos/v2/list");
+      const response = await fetch(`${deal_API}`);
       const data = await response.json();
 
       setCarouselItems(data);
@@ -66,7 +67,6 @@ function Deals() {
               <p
                 style={{
                   fontSize: "15px",
-                  color: "#9A9A9A",
                   textAlign: "center",
                 }}
               >

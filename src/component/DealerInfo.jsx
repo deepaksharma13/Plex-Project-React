@@ -12,20 +12,9 @@ import {items} from '../utilis/reviewData'
 function DealerInfo() {
   const [carouselItems, setCarouselItems] = useState([]);
 
-  // useEffect(() => {
-  //   // fetching data from an API
-  //   const fetchData = async () => {
-  //     //  API call
-  //     const response = await fetch(
-  //       "https://jsonplaceholder.typicode.com/photos?_start=0&_limit=4"
-  //     );
-  //     const data = await response.json();
-
-  //     setCarouselItems(data);
-  //   };
-
-  //   fetchData();
-  // }, []);
+  useEffect(() => {
+      setCarouselItems(items);
+  }, []);
     // Define slick settings
     const settings = {
       dots: true,
@@ -78,18 +67,18 @@ function DealerInfo() {
           </div>
           <Row>
             <Col sm={12}>
-              <div className="d-flex">
+              <div className="d-flex" style={{color: "#045594"}}>
                 <span>
                   <LuMapPin />
                 </span>
-                <p className="ms-2" style={{ fontSize: "14px" }}>
+                <p className="ms-2" style={{ fontSize: "14px"}}>
                   Coworking, MGF Metropolis Mall, UGF, TyrePlex - India
                   Accelerator, Mehrauli-Gurgaon Rd, Gurugram, Haryana 122003
-                </p>{" "}
+                </p>
               </div>
             </Col>
             <Col sm={12}>
-              <div className="d-flex">
+              <div className="d-flex" style={{color: "#045594"}}>
                 <span>
                   <BsClock />
                 </span>
